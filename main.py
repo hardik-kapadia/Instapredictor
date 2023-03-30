@@ -35,3 +35,5 @@ if __name__ == "__main__":
         except ValueError as e:
             errors.append(profile)
             print(f" getting error for profile {profile} -> {e}")
+
+    print(f"errors: {errors}")
