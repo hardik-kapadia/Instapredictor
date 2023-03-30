@@ -25,8 +25,8 @@ model = tf.keras.models.Model(inputs=[numerical_input, image_input], outputs=out
 model.compile(optimizer='adam', loss='mse')
 
 # Train the model
-x_numerical_train = # numerical data training set
-x_image_train = # image data training set
-y_train = # output value training set
+x_numerical_train = None # numerical data training set
+x_image_train = None # image data training set
+y_train = None # output value training set
 
 model.fit([x_numerical_train, x_image_train], y_train, epochs=10, batch_size=32)

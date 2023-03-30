@@ -91,6 +91,7 @@ def read_data(folder="Data", metadata_ext=".json.xz"):
         for filename in os.listdir(folder + "/" + inner_folder):
 
             if filename.endswith(metadata_ext):
+                
                 post_node = instaloader.structures.load_structure_from_file(
                     L.context, os.path.join(folder, inner_folder, filename)
                 )
