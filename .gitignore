@@ -1,3 +1,6 @@
 Data/*
+Data3
+Data*
 *.pyc
 __pycache__
+**.pyc

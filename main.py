@@ -5,15 +5,9 @@ def read_names_from_files(filename: str = "instagram handle list.txt"):
 
     names = set()
 
-    count = 0
-
     with open(filename, "r") as f:
 
         for line in f:
-            if count >= 10:
-                break
-
-            count += 1
             names.add(line.strip())
 
     return names
