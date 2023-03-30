@@ -6,14 +6,16 @@ class InstagramData:
     def __init__(self) -> None:
 
         self.L = instaloader.Instaloader()
-        self.L.login('chapri.slayer','RandomPassword99')
+        # self.L.login('chapri.slayer','CommonPassword99')
 
-    def download_ig_profile(self, username: str, max_count: int = 10):
+    def download_ig_profile(self, username: str, max_count: int = 30):
 
         try:
             profile_node = instaloader.Profile.from_username(self.L.context, username)
         except instaloader.exceptions.ProfileNotExistsException:
             raise ValueError("Profile doesn't exist")
+        except instaloader.exceptions.LoginRequiredException:
+            raise ValueError('Login required')
 
         profile_follower_count = profile_node.followers
 
